@@ -841,9 +841,21 @@ def write_outputs(rep: dict, outdir: Path) -> None:
     outdir.mkdir(parents=True, exist_ok=True)
     (outdir / "history").mkdir(exist_ok=True)
     js = json.dumps(rep, indent=2, ensure_ascii=False, default=str)
-    (outdir / "latest.json").write_text(js, encoding="utf-8")
-    (outdir / "latest.md").write_text(to_markdown(rep), encoding="utf-8")
     (outdir / "history" / f"{rep.get('run_date')}.json").write_text(js, encoding="utf-8")
+    # always record how the last run went, so a stale-data message can say why
+    (outdir / "last_run.json").write_text(json.dumps(
+        {k: rep.get(k) for k in ("status", "message", "run_date", "data_date", "generated_at_ist")},
+        indent=2, ensure_ascii=False), encoding="utf-8")
+    # a holiday / not-yet-updated run must not replace the last good scan
+    latest = outdir / "latest.json"
+    if rep.get("status") == "no_data_today" and latest.exists():
+        try:
+            if json.loads(latest.read_text(encoding="utf-8")).get("status") == "ok":
+                return
+        except Exception:
+            pass
+    latest.write_text(js, encoding="utf-8")
+    (outdir / "latest.md").write_text(to_markdown(rep), encoding="utf-8")
 
 
 def main(argv=None) -> int:
