@@ -2,7 +2,8 @@ name: daily-swing-scan
 
 on:
   schedule:
-    - cron: "45 13 * * 1-5"   # 13:45 UTC = 7:15 PM IST, Monday–Friday
+    - cron: "45 13 * * 1-5"   # 13:45 UTC = 7:15 PM IST, Monday–Friday (main run)
+    - cron: "45 14 * * 1-5"   # 14:45 UTC = 8:15 PM IST (retry; skips itself if the main run succeeded)
   workflow_dispatch:           # "Run workflow" button for manual runs
 
 permissions:
@@ -19,19 +20,35 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Skip the retry if today's scan already succeeded
+        id: check
+        run: |
+          today=$(TZ=Asia/Kolkata date +%F)
+          skip=false
+          if [ "${{ github.event.schedule }}" = "45 14 * * 1-5" ] \
+             && grep -q '"status": "ok"' output/last_run.json 2>/dev/null \
+             && grep -q "\"run_date\": \"$today\"" output/last_run.json 2>/dev/null; then
+            skip=true
+          fi
+          echo "skip=$skip" >> "$GITHUB_OUTPUT"
+          echo "skip=$skip (today=$today)"
+
       - uses: actions/setup-python@v5
+        if: steps.check.outputs.skip != 'true'
         with:
           python-version: "3.12"
           cache: pip
 
       - name: Install
+        if: steps.check.outputs.skip != 'true'
         run: pip install -r requirements.txt
 
       - name: Run screener
+        if: steps.check.outputs.skip != 'true'
         run: python screener.py
 
       - name: Commit results
-        if: always()           # also commit the error report, so the Claude task can say what failed
+        if: always() && steps.check.outputs.skip != 'true'   # also commit the error report, so the Claude task can say what failed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
