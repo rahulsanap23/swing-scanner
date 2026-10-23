@@ -1,0 +1,66 @@
+# Swing scanner settings. Edit these instead of the code.
+
+capital: 200000            # trading capital, ₹
+risk_pct: 1.0              # max risk per trade, % of capital
+max_position: 50000        # max ₹ in one position (25% of capital)
+max_stop_pct: 5            # widest stop allowed, % below entry
+max_target_pct: 10         # target cap, % above entry
+min_rr: 2.0                # minimum reward:risk
+min_price: 30              # skip stocks below this price, ₹
+max_pct_of_adtv: 1.0       # position must be ≤ this % of 20-day avg daily traded value
+candidates_per_category: 5 # how many ranked candidates to hand to Claude per category
+history_period: 2y         # price history to download (needs ~1 year+ for 200 EMA / 52-week high)
+
+categories:
+  NIFTY50:
+    label: Nifty 50
+    file: nifty50.csv
+    expected_size: 50
+    urls:
+      - https://www.niftyindices.com/IndexConstituent/ind_nifty50list.csv
+      - https://nsearchives.nseindia.com/content/indices/ind_nifty50list.csv
+    min_adtv_cr: 100
+    atr_pct: [1.0, 3.0]
+    min_target_pct: 3
+    breakout_volume_x: 1.3
+    check_circuits: false    # all Nifty 50 stocks are in F&O, which has no circuit limits
+
+  MIDCAP150:
+    label: Midcap 150
+    file: midcap150.csv
+    expected_size: 150
+    urls:
+      - https://www.niftyindices.com/IndexConstituent/ind_niftymidcap150list.csv
+      - https://nsearchives.nseindia.com/content/indices/ind_niftymidcap150list.csv
+    min_adtv_cr: 25
+    atr_pct: [1.5, 4.0]
+    min_target_pct: 4
+    breakout_volume_x: 1.5
+    check_circuits: true
+
+  SMALLCAP250:
+    label: Smallcap 250
+    file: smallcap250.csv
+    expected_size: 250
+    urls:
+      - https://www.niftyindices.com/IndexConstituent/ind_niftysmallcap250list.csv
+      - https://nsearchives.nseindia.com/content/indices/ind_niftysmallcap250list.csv
+    min_adtv_cr: 5
+    atr_pct: [2.0, 5.0]
+    min_target_pct: 4
+    breakout_volume_x: 1.5
+    check_circuits: true
+
+  MICROCAP250:
+    label: Microcap 250
+    file: microcap250.csv
+    expected_size: 250
+    urls:
+      - https://www.niftyindices.com/IndexConstituent/ind_niftymicrocap250_list.csv
+      - https://nsearchives.nseindia.com/content/indices/ind_niftymicrocap250_list.csv
+    min_adtv_cr: 1
+    min_delivery_pct: 35
+    atr_pct: [2.0, 5.0]
+    min_target_pct: 4
+    breakout_volume_x: 1.5
+    check_circuits: true
