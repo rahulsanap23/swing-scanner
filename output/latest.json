@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at_ist": "2026-10-28 20:06",
-  "run_date": "2026-10-28",
-  "data_date": "2026-10-28",
+  "generated_at_ist": "2026-10-29 20:07",
+  "run_date": "2026-10-29",
+  "data_date": "2026-10-29",
   "settings": {
     "capital": 200000,
     "risk_pct": 1.0,
@@ -45,35 +45,79 @@
   "status": "ok",
   "message": "scan complete",
   "market": {
-    "nifty_close": 22698.85,
-    "nifty_ema20": 22812.12,
-    "nifty_ema50": 23173.28,
-    "nifty_ema200": 23934.6,
+    "nifty_close": 22936.75,
+    "nifty_ema20": 22823.99,
+    "nifty_ema50": 23164.01,
+    "nifty_ema200": 23925.57,
     "nifty_above": {
-      "ema20": false,
+      "ema20": true,
       "ema50": false,
       "ema200": false
     },
-    "nifty_ret_5d_pct": -0.49,
-    "nifty_ret_21d_pct": -1.91,
-    "nifty_rsi": 44.9,
+    "nifty_ret_5d_pct": 1.1,
+    "nifty_ret_21d_pct": 0.69,
+    "nifty_rsi": 50.85,
     "higher_highs_and_lows_20d": false,
-    "breadth_pct_above_50ema": 19.25,
-    "india_vix": 16.25,
-    "india_vix_5d_change_pct": 3.6
+    "breadth_pct_above_50ema": 21.84,
+    "india_vix": 15.12,
+    "india_vix_5d_change_pct": -4.08
   },
   "categories": {
     "NIFTY50": {
       "label": "Nifty 50",
       "universe_size": 50,
-      "passed_all_hard_filters": 0,
-      "candidates": [],
-      "closest_miss": {
-        "symbol": "DRREDDY",
-        "failed_step": "target & R:R",
-        "detail": "target only 2.5% away (resistance too close)",
-        "steps_passed": 13
-      },
+      "passed_all_hard_filters": 1,
+      "candidates": [
+        {
+          "symbol": "KOTAKBANK",
+          "passed": true,
+          "steps_passed": 15,
+          "flags": [],
+          "unverified": [],
+          "cmp": 459.0,
+          "adtv_cr": 1236.14,
+          "adtv_source": "NSE turnover",
+          "delivery_pct_20d": 67.63,
+          "volume_ratio": 1.68,
+          "rs_1m_pct": 13.53,
+          "rs_3m_pct": 24.37,
+          "rsi": 68.01,
+          "setup": "52-week high breakout",
+          "setup_family": "breakout",
+          "other_setups": [
+            "Base breakout on volume",
+            "Pullback to 20 EMA"
+          ],
+          "pct_above_ema20": 5.14,
+          "ret_5d_pct": 5.03,
+          "atr_pct": 2.22,
+          "entry": 459.0,
+          "stop": 443.71,
+          "stop_basis": "1.5× ATR",
+          "risk_pct": 3.33,
+          "entry_type": "at close / CMP",
+          "target": 497.22,
+          "target_basis": "no overhead resistance (2.5R)",
+          "target_pct": 8.33,
+          "rr": 2.5,
+          "nearest_resistance": null,
+          "qty": 108,
+          "position_value": 49572.0,
+          "risk_amount": 1651.05,
+          "score": 5.18,
+          "score_notes": [
+            "1M RS+",
+            "RSI fits breakout",
+            "MACD>signal",
+            "vol 1.7x",
+            "near 52W high",
+            "delivery 68%"
+          ],
+          "adx": 34.56,
+          "macd_above_signal": true
+        }
+      ],
+      "closest_miss": null,
       "funnel": [
         {
           "step": "universe",
@@ -101,84 +145,131 @@
         },
         {
           "step": "primary uptrend (50 EMA, 200)",
-          "remaining": 8
+          "remaining": 9
         },
         {
           "step": "20 EMA",
-          "remaining": 8
+          "remaining": 9
         },
         {
           "step": "3M relative strength > 0",
-          "remaining": 8
+          "remaining": 9
         },
         {
           "step": "RSI 40-75",
-          "remaining": 8
+          "remaining": 9
         },
         {
           "step": "named setup",
-          "remaining": 3
+          "remaining": 8
         },
         {
           "step": "not overextended",
-          "remaining": 3
+          "remaining": 8
         },
         {
           "step": "ATR band",
-          "remaining": 2
+          "remaining": 6
         },
         {
           "step": "stop within limit",
-          "remaining": 2
+          "remaining": 6
         },
         {
           "step": "target & R:R",
-          "remaining": 0
+          "remaining": 1
         },
         {
           "step": "position size",
-          "remaining": 0
+          "remaining": 1
         }
       ]
     },
     "MIDCAP150": {
       "label": "Midcap 150",
       "universe_size": 150,
-      "passed_all_hard_filters": 2,
+      "passed_all_hard_filters": 3,
       "candidates": [
+        {
+          "symbol": "LAURUSLABS",
+          "passed": true,
+          "steps_passed": 15,
+          "flags": [],
+          "unverified": [],
+          "cmp": 2244.0,
+          "adtv_cr": 337.91,
+          "adtv_source": "NSE turnover",
+          "delivery_pct_20d": 46.65,
+          "volume_ratio": 1.79,
+          "rs_1m_pct": 10.84,
+          "rs_3m_pct": 33.19,
+          "rsi": 71.53,
+          "setup": "52-week high breakout",
+          "setup_family": "breakout",
+          "other_setups": [
+            "Base breakout on volume"
+          ],
+          "pct_above_ema20": 8.91,
+          "ret_5d_pct": 12.06,
+          "atr_pct": 2.76,
+          "entry": 2244.0,
+          "stop": 2151.16,
+          "stop_basis": "1.5× ATR",
+          "risk_pct": 4.14,
+          "entry_type": "at close / CMP",
+          "target": 2468.4,
+          "target_basis": "no overhead resistance (2.5R)",
+          "target_pct": 10.0,
+          "rr": 2.42,
+          "nearest_resistance": null,
+          "qty": 21,
+          "position_value": 47124.0,
+          "risk_amount": 1949.69,
+          "score": 5.79,
+          "score_notes": [
+            "1M RS+",
+            "RSI fits breakout",
+            "MACD>signal",
+            "ADX≥20 rising",
+            "vol 1.8x",
+            "near 52W high"
+          ],
+          "adx": 20.08,
+          "macd_above_signal": true
+        },
         {
           "symbol": "INDHOTEL",
           "passed": true,
           "steps_passed": 15,
           "flags": [],
           "unverified": [],
-          "cmp": 805.2,
-          "adtv_cr": 480.2,
+          "cmp": 810.0,
+          "adtv_cr": 404.11,
           "adtv_source": "NSE turnover",
-          "delivery_pct_20d": 60.13,
-          "volume_ratio": 0.64,
-          "rs_1m_pct": 12.94,
-          "rs_3m_pct": 15.81,
-          "rsi": 68.35,
+          "delivery_pct_20d": 59.71,
+          "volume_ratio": 0.67,
+          "rs_1m_pct": 13.15,
+          "rs_3m_pct": 16.01,
+          "rsi": 69.36,
           "setup": "NR7 near resistance",
           "setup_family": "consolidation",
           "other_setups": [],
-          "pct_above_ema20": 6.09,
-          "ret_5d_pct": 6.93,
-          "atr_pct": 2.64,
-          "entry": 816.93,
-          "stop": 785.02,
+          "pct_above_ema20": 6.04,
+          "ret_5d_pct": 3.54,
+          "atr_pct": 2.55,
+          "entry": 817.98,
+          "stop": 787.03,
           "stop_basis": "1.5× ATR",
-          "risk_pct": 3.91,
+          "risk_pct": 3.78,
           "entry_type": "buy above trigger",
-          "target": 896.71,
+          "target": 895.37,
           "target_basis": "no overhead resistance (2.5R)",
-          "target_pct": 9.77,
+          "target_pct": 9.46,
           "rr": 2.5,
           "nearest_resistance": null,
           "qty": 61,
-          "position_value": 49832.77,
-          "risk_amount": 1946.51,
+          "position_value": 49896.94,
+          "risk_amount": 1888.19,
           "score": 4.5,
           "score_notes": [
             "1M RS+",
@@ -187,49 +278,50 @@
             "near 52W high",
             "delivery 60%"
           ],
-          "adx": 25.36,
+          "adx": 27.19,
           "macd_above_signal": true
         },
         {
-          "symbol": "LAURUSLABS",
+          "symbol": "NYKAA",
           "passed": true,
           "steps_passed": 15,
           "flags": [],
           "unverified": [],
-          "cmp": 2181.9,
-          "adtv_cr": 330.33,
+          "cmp": 352.9,
+          "adtv_cr": 175.77,
           "adtv_source": "NSE turnover",
-          "delivery_pct_20d": 48.03,
-          "volume_ratio": 1.41,
-          "rs_1m_pct": 10.83,
-          "rs_3m_pct": 31.08,
-          "rsi": 67.63,
+          "delivery_pct_20d": 52.66,
+          "volume_ratio": 1.48,
+          "rs_1m_pct": 7.68,
+          "rs_3m_pct": 13.93,
+          "rsi": 61.08,
           "setup": "Pullback to 20 EMA",
           "setup_family": "pullback",
           "other_setups": [],
-          "pct_above_ema20": 6.9,
-          "ret_5d_pct": 8.42,
-          "atr_pct": 2.78,
-          "entry": 2181.9,
-          "stop": 2090.92,
+          "pct_above_ema20": 5.02,
+          "ret_5d_pct": 9.63,
+          "atr_pct": 3.05,
+          "entry": 352.9,
+          "stop": 336.77,
           "stop_basis": "1.5× ATR",
-          "risk_pct": 4.17,
+          "risk_pct": 4.57,
           "entry_type": "at close / CMP",
-          "target": 2400.09,
+          "target": 388.19,
           "target_basis": "no overhead resistance (2.5R)",
           "target_pct": 10.0,
-          "rr": 2.4,
+          "rr": 2.19,
           "nearest_resistance": null,
-          "qty": 21,
-          "position_value": 45819.9,
-          "risk_amount": 1910.66,
-          "score": 3.0,
+          "qty": 124,
+          "position_value": 43759.6,
+          "risk_amount": 1999.7,
+          "score": 3.5,
           "score_notes": [
             "1M RS+",
             "MACD>0",
-            "near 52W high"
+            "near 52W high",
+            "delivery 53%"
           ],
-          "adx": 18.93,
+          "adx": 15.59,
           "macd_above_signal": true
         }
       ],
@@ -261,57 +353,187 @@
         },
         {
           "step": "primary uptrend (50 EMA, 200)",
-          "remaining": 16
+          "remaining": 22
         },
         {
           "step": "20 EMA",
-          "remaining": 15
+          "remaining": 21
         },
         {
           "step": "3M relative strength > 0",
-          "remaining": 15
+          "remaining": 19
         },
         {
           "step": "RSI 40-75",
-          "remaining": 15
+          "remaining": 19
         },
         {
           "step": "named setup",
-          "remaining": 6
+          "remaining": 12
         },
         {
           "step": "not overextended",
-          "remaining": 5
+          "remaining": 11
         },
         {
           "step": "ATR band",
-          "remaining": 5
+          "remaining": 11
         },
         {
           "step": "stop within limit",
-          "remaining": 5
+          "remaining": 9
         },
         {
           "step": "target & R:R",
-          "remaining": 2
+          "remaining": 3
         },
         {
           "step": "position size",
-          "remaining": 2
+          "remaining": 3
         }
       ]
     },
     "SMALLCAP250": {
       "label": "Smallcap 250",
       "universe_size": 251,
-      "passed_all_hard_filters": 0,
-      "candidates": [],
-      "closest_miss": {
-        "symbol": "ATHERENERG",
-        "failed_step": "stop within limit",
-        "detail": "stop 6.8% below entry > 5%",
-        "steps_passed": 12
-      },
+      "passed_all_hard_filters": 3,
+      "candidates": [
+        {
+          "symbol": "GESHIP",
+          "passed": true,
+          "steps_passed": 15,
+          "flags": [],
+          "unverified": [],
+          "cmp": 1618.8,
+          "adtv_cr": 112.29,
+          "adtv_source": "NSE turnover",
+          "delivery_pct_20d": 52.48,
+          "volume_ratio": 1.72,
+          "rs_1m_pct": 4.85,
+          "rs_3m_pct": 24.86,
+          "rsi": 67.72,
+          "setup": "Base breakout on volume",
+          "setup_family": "breakout",
+          "other_setups": [
+            "Pullback to 20 EMA"
+          ],
+          "pct_above_ema20": 6.04,
+          "ret_5d_pct": 6.6,
+          "atr_pct": 2.99,
+          "entry": 1618.8,
+          "stop": 1546.09,
+          "stop_basis": "1.5× ATR",
+          "risk_pct": 4.49,
+          "entry_type": "at close / CMP",
+          "target": 1780.68,
+          "target_basis": "just below resistance 1798.00",
+          "target_pct": 10.0,
+          "rr": 2.23,
+          "nearest_resistance": 1798.0,
+          "qty": 27,
+          "position_value": 43707.6,
+          "risk_amount": 1963.08,
+          "score": 5.72,
+          "score_notes": [
+            "1M RS+",
+            "RSI fits breakout",
+            "MACD>signal",
+            "ADX≥20 rising",
+            "vol 1.7x",
+            "delivery 52%"
+          ],
+          "adx": 25.6,
+          "macd_above_signal": true
+        },
+        {
+          "symbol": "SONACOMS",
+          "passed": true,
+          "steps_passed": 15,
+          "flags": [],
+          "unverified": [],
+          "cmp": 873.6,
+          "adtv_cr": 261.88,
+          "adtv_source": "NSE turnover",
+          "delivery_pct_20d": 47.74,
+          "volume_ratio": 0.71,
+          "rs_1m_pct": 7.39,
+          "rs_3m_pct": 28.19,
+          "rsi": 65.3,
+          "setup": "NR7 near resistance",
+          "setup_family": "consolidation",
+          "other_setups": [],
+          "pct_above_ema20": 7.73,
+          "ret_5d_pct": 14.21,
+          "atr_pct": 3.34,
+          "entry": 887.57,
+          "stop": 843.83,
+          "stop_basis": "1.5× ATR",
+          "risk_pct": 4.93,
+          "entry_type": "buy above trigger",
+          "target": 976.33,
+          "target_basis": "no overhead resistance (2.5R)",
+          "target_pct": 10.0,
+          "rr": 2.03,
+          "nearest_resistance": null,
+          "qty": 45,
+          "position_value": 39940.72,
+          "risk_amount": 1968.24,
+          "score": 4.0,
+          "score_notes": [
+            "1M RS+",
+            "MACD near/above 0",
+            "MACD hist rising",
+            "near 52W high"
+          ],
+          "adx": 20.0,
+          "macd_above_signal": true
+        },
+        {
+          "symbol": "ANANDRATHI",
+          "passed": true,
+          "steps_passed": 15,
+          "flags": [],
+          "unverified": [],
+          "cmp": 2270.0,
+          "adtv_cr": 109.36,
+          "adtv_source": "NSE turnover",
+          "delivery_pct_20d": 50.04,
+          "volume_ratio": 0.54,
+          "rs_1m_pct": 5.05,
+          "rs_3m_pct": 17.94,
+          "rsi": 67.44,
+          "setup": "Inside bar near resistance",
+          "setup_family": "consolidation",
+          "other_setups": [],
+          "pct_above_ema20": 3.56,
+          "ret_5d_pct": 2.11,
+          "atr_pct": 2.03,
+          "entry": 2287.17,
+          "stop": 2209.58,
+          "stop_basis": "below 5-day swing low",
+          "risk_pct": 3.39,
+          "entry_type": "buy above trigger",
+          "target": 2481.13,
+          "target_basis": "no overhead resistance (2.5R)",
+          "target_pct": 8.48,
+          "rr": 2.5,
+          "nearest_resistance": null,
+          "qty": 21,
+          "position_value": 48030.47,
+          "risk_amount": 1629.26,
+          "score": 4.0,
+          "score_notes": [
+            "1M RS+",
+            "MACD near/above 0",
+            "stop under swing low",
+            "near 52W high",
+            "delivery 50%"
+          ],
+          "adx": 25.23,
+          "macd_above_signal": true
+        }
+      ],
+      "closest_miss": null,
       "funnel": [
         {
           "step": "universe",
@@ -339,100 +561,57 @@
         },
         {
           "step": "primary uptrend (50 EMA, 200)",
-          "remaining": 42
+          "remaining": 43
         },
         {
           "step": "20 EMA",
-          "remaining": 38
+          "remaining": 39
         },
         {
           "step": "3M relative strength > 0",
-          "remaining": 37
+          "remaining": 39
         },
         {
           "step": "RSI 40-75",
-          "remaining": 36
+          "remaining": 38
         },
         {
           "step": "named setup",
-          "remaining": 10
+          "remaining": 16
         },
         {
           "step": "not overextended",
-          "remaining": 9
+          "remaining": 15
         },
         {
           "step": "ATR band",
-          "remaining": 9
+          "remaining": 14
         },
         {
           "step": "stop within limit",
-          "remaining": 0
+          "remaining": 4
         },
         {
           "step": "target & R:R",
-          "remaining": 0
+          "remaining": 3
         },
         {
           "step": "position size",
-          "remaining": 0
+          "remaining": 3
         }
       ]
     },
     "MICROCAP250": {
       "label": "Microcap 250",
       "universe_size": 254,
-      "passed_all_hard_filters": 1,
-      "candidates": [
-        {
-          "symbol": "SHREEJISPG",
-          "passed": true,
-          "steps_passed": 15,
-          "flags": [
-            "⚠ASM (long-term, stage unknown — verify)"
-          ],
-          "unverified": [],
-          "cmp": 840.3,
-          "adtv_cr": 94.55,
-          "adtv_source": "NSE turnover",
-          "delivery_pct_20d": 43.54,
-          "volume_ratio": 1.52,
-          "rs_1m_pct": 13.85,
-          "rs_3m_pct": 44.18,
-          "rsi": 67.15,
-          "setup": "Pullback to 20 EMA",
-          "setup_family": "pullback",
-          "other_setups": [
-            "NR7 near resistance"
-          ],
-          "pct_above_ema20": 5.49,
-          "ret_5d_pct": 7.82,
-          "atr_pct": 3.12,
-          "entry": 840.3,
-          "stop": 801.02,
-          "stop_basis": "1.5× ATR",
-          "risk_pct": 4.67,
-          "entry_type": "at close / CMP",
-          "target": 924.33,
-          "target_basis": "no overhead resistance (2.5R)",
-          "target_pct": 10.0,
-          "rr": 2.14,
-          "nearest_resistance": null,
-          "qty": 50,
-          "position_value": 42015.0,
-          "risk_amount": 1963.88,
-          "score": 3.5,
-          "score_notes": [
-            "1M RS+",
-            "MACD>0",
-            "trend ADX≥20",
-            "near 52W high"
-          ],
-          "adx": 28.71,
-          "macd_above_signal": false
-        }
-      ],
-      "closest_miss": null,
+      "passed_all_hard_filters": 0,
+      "candidates": [],
+      "closest_miss": {
+        "symbol": "LUMAXTECH",
+        "failed_step": "stop within limit",
+        "detail": "stop 7.1% below entry > 5%",
+        "steps_passed": 12
+      },
       "funnel": [
         {
           "step": "universe",
@@ -452,51 +631,51 @@
         },
         {
           "step": "no repeated circuits",
-          "remaining": 220
+          "remaining": 221
         },
         {
           "step": "liquidity",
-          "remaining": 204
+          "remaining": 205
         },
         {
           "step": "primary uptrend (50 EMA, 200)",
-          "remaining": 25
+          "remaining": 31
         },
         {
           "step": "20 EMA",
-          "remaining": 20
+          "remaining": 23
         },
         {
           "step": "3M relative strength > 0",
-          "remaining": 20
+          "remaining": 21
         },
         {
           "step": "RSI 40-75",
-          "remaining": 20
+          "remaining": 21
         },
         {
           "step": "named setup",
-          "remaining": 9
+          "remaining": 8
         },
         {
           "step": "not overextended",
-          "remaining": 8
+          "remaining": 7
         },
         {
           "step": "ATR band",
-          "remaining": 8
+          "remaining": 5
         },
         {
           "step": "stop within limit",
-          "remaining": 2
+          "remaining": 0
         },
         {
           "step": "target & R:R",
-          "remaining": 1
+          "remaining": 0
         },
         {
           "step": "position size",
-          "remaining": 1
+          "remaining": 0
         }
       ]
     }
