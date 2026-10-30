@@ -1,0 +1,585 @@
+{
+  "schema_version": 1,
+  "generated_at_ist": "2026-10-30 20:08",
+  "run_date": "2026-10-30",
+  "data_date": "2026-10-30",
+  "settings": {
+    "capital": 200000,
+    "risk_pct": 1.0,
+    "max_position": 50000,
+    "max_stop_pct": 5,
+    "max_target_pct": 10,
+    "min_rr": 2.0
+  },
+  "data_checks": {
+    "constituents": {
+      "NIFTY50": "downloaded",
+      "MIDCAP150": "downloaded",
+      "SMALLCAP250": "downloaded",
+      "MICROCAP250": "downloaded"
+    },
+    "prices": {
+      "source": "Yahoo Finance (yfinance)",
+      "requested": 704,
+      "received": 699,
+      "missing": [
+        "BAGMANE",
+        "DUMMYHEG",
+        "DUMMYINGL1",
+        "DUMMYINGL2",
+        "DUMMYINXGN"
+      ]
+    },
+    "nse_bhavcopy": {
+      "days_ok": 22,
+      "days_requested": 22,
+      "failures": []
+    },
+    "surveillance": {
+      "asm": "ok",
+      "gsm": "ok",
+      "esm": "ok",
+      "fo_ban": "ok"
+    }
+  },
+  "status": "ok",
+  "message": "scan complete",
+  "market": {
+    "nifty_close": 23053.1,
+    "nifty_ema20": 22845.81,
+    "nifty_ema50": 23159.66,
+    "nifty_ema200": 23916.0,
+    "nifty_above": {
+      "ema20": true,
+      "ema50": false,
+      "ema200": false
+    },
+    "nifty_ret_5d_pct": 2.0,
+    "nifty_ret_21d_pct": 1.48,
+    "nifty_rsi": 53.5,
+    "higher_highs_and_lows_20d": false,
+    "breadth_pct_above_50ema": 16.79,
+    "india_vix": 15.3,
+    "india_vix_5d_change_pct": -9.24
+  },
+  "categories": {
+    "NIFTY50": {
+      "label": "Nifty 50",
+      "universe_size": 50,
+      "passed_all_hard_filters": 2,
+      "candidates": [
+        {
+          "symbol": "ADANIPORTS",
+          "passed": true,
+          "steps_passed": 15,
+          "flags": [],
+          "unverified": [],
+          "cmp": 1850.0,
+          "adtv_cr": 605.17,
+          "adtv_source": "NSE turnover",
+          "delivery_pct_20d": 57.63,
+          "volume_ratio": 1.91,
+          "rs_1m_pct": 0.05,
+          "rs_3m_pct": 17.27,
+          "rsi": 61.28,
+          "setup": "Inside bar near resistance",
+          "setup_family": "consolidation",
+          "other_setups": [],
+          "pct_above_ema20": 4.44,
+          "ret_5d_pct": 8.65,
+          "atr_pct": 2.76,
+          "entry": 1875.34,
+          "stop": 1798.67,
+          "stop_basis": "1.5× ATR",
+          "risk_pct": 4.09,
+          "entry_type": "buy above trigger",
+          "target": 2062.88,
+          "target_basis": "no overhead resistance (2.5R)",
+          "target_pct": 10.0,
+          "rr": 2.45,
+          "nearest_resistance": null,
+          "qty": 26,
+          "position_value": 48758.92,
+          "risk_amount": 1993.61,
+          "score": 4.5,
+          "score_notes": [
+            "1M RS+",
+            "MACD near/above 0",
+            "MACD hist rising",
+            "near 52W high",
+            "delivery 58%"
+          ],
+          "adx": 20.25,
+          "macd_above_signal": true
+        },
+        {
+          "symbol": "KOTAKBANK",
+          "passed": true,
+          "steps_passed": 15,
+          "flags": [],
+          "unverified": [],
+          "cmp": 461.6,
+          "adtv_cr": 1216.38,
+          "adtv_source": "NSE turnover",
+          "delivery_pct_20d": 67.07,
+          "volume_ratio": 0.73,
+          "rs_1m_pct": 12.03,
+          "rs_3m_pct": 25.04,
+          "rsi": 69.12,
+          "setup": "Pullback to 20 EMA",
+          "setup_family": "pullback",
+          "other_setups": [],
+          "pct_above_ema20": 5.16,
+          "ret_5d_pct": 7.22,
+          "atr_pct": 2.14,
+          "entry": 461.6,
+          "stop": 446.78,
+          "stop_basis": "1.5× ATR",
+          "risk_pct": 3.21,
+          "entry_type": "at close / CMP",
+          "target": 498.66,
+          "target_basis": "no overhead resistance (2.5R)",
+          "target_pct": 8.03,
+          "rr": 2.5,
+          "nearest_resistance": null,
+          "qty": 108,
+          "position_value": 49852.8,
+          "risk_amount": 1600.81,
+          "score": 4.0,
+          "score_notes": [
+            "1M RS+",
+            "MACD>0",
+            "trend ADX≥20",
+            "near 52W high",
+            "delivery 67%"
+          ],
+          "adx": 35.23,
+          "macd_above_signal": true
+        }
+      ],
+      "closest_miss": null,
+      "funnel": [
+        {
+          "step": "universe",
+          "remaining": 50
+        },
+        {
+          "step": "enough price history",
+          "remaining": 50
+        },
+        {
+          "step": "price floor",
+          "remaining": 50
+        },
+        {
+          "step": "surveillance / T2T / F&O ban",
+          "remaining": 50
+        },
+        {
+          "step": "no repeated circuits",
+          "remaining": 50
+        },
+        {
+          "step": "liquidity",
+          "remaining": 50
+        },
+        {
+          "step": "primary uptrend (50 EMA, 200)",
+          "remaining": 10
+        },
+        {
+          "step": "20 EMA",
+          "remaining": 10
+        },
+        {
+          "step": "3M relative strength > 0",
+          "remaining": 9
+        },
+        {
+          "step": "RSI 40-75",
+          "remaining": 8
+        },
+        {
+          "step": "named setup",
+          "remaining": 5
+        },
+        {
+          "step": "not overextended",
+          "remaining": 5
+        },
+        {
+          "step": "ATR band",
+          "remaining": 4
+        },
+        {
+          "step": "stop within limit",
+          "remaining": 4
+        },
+        {
+          "step": "target & R:R",
+          "remaining": 2
+        },
+        {
+          "step": "position size",
+          "remaining": 2
+        }
+      ]
+    },
+    "MIDCAP150": {
+      "label": "Midcap 150",
+      "universe_size": 150,
+      "passed_all_hard_filters": 1,
+      "candidates": [
+        {
+          "symbol": "NYKAA",
+          "passed": true,
+          "steps_passed": 15,
+          "flags": [],
+          "unverified": [],
+          "cmp": 349.35,
+          "adtv_cr": 174.58,
+          "adtv_source": "NSE turnover",
+          "delivery_pct_20d": 51.98,
+          "volume_ratio": 0.57,
+          "rs_1m_pct": 5.16,
+          "rs_3m_pct": 10.41,
+          "rsi": 58.44,
+          "setup": "NR7 near resistance",
+          "setup_family": "consolidation",
+          "other_setups": [],
+          "pct_above_ema20": 3.57,
+          "ret_5d_pct": 9.41,
+          "atr_pct": 3.0,
+          "entry": 355.21,
+          "stop": 339.51,
+          "stop_basis": "1.5× ATR",
+          "risk_pct": 4.42,
+          "entry_type": "buy above trigger",
+          "target": 390.73,
+          "target_basis": "no overhead resistance (2.5R)",
+          "target_pct": 10.0,
+          "rr": 2.26,
+          "nearest_resistance": null,
+          "qty": 127,
+          "position_value": 45111.54,
+          "risk_amount": 1994.32,
+          "score": 4.5,
+          "score_notes": [
+            "1M RS+",
+            "MACD near/above 0",
+            "MACD hist rising",
+            "near 52W high",
+            "delivery 52%"
+          ],
+          "adx": 16.38,
+          "macd_above_signal": true
+        }
+      ],
+      "closest_miss": null,
+      "funnel": [
+        {
+          "step": "universe",
+          "remaining": 150
+        },
+        {
+          "step": "enough price history",
+          "remaining": 143
+        },
+        {
+          "step": "price floor",
+          "remaining": 141
+        },
+        {
+          "step": "surveillance / T2T / F&O ban",
+          "remaining": 140
+        },
+        {
+          "step": "no repeated circuits",
+          "remaining": 140
+        },
+        {
+          "step": "liquidity",
+          "remaining": 122
+        },
+        {
+          "step": "primary uptrend (50 EMA, 200)",
+          "remaining": 19
+        },
+        {
+          "step": "20 EMA",
+          "remaining": 17
+        },
+        {
+          "step": "3M relative strength > 0",
+          "remaining": 17
+        },
+        {
+          "step": "RSI 40-75",
+          "remaining": 16
+        },
+        {
+          "step": "named setup",
+          "remaining": 7
+        },
+        {
+          "step": "not overextended",
+          "remaining": 6
+        },
+        {
+          "step": "ATR band",
+          "remaining": 6
+        },
+        {
+          "step": "stop within limit",
+          "remaining": 5
+        },
+        {
+          "step": "target & R:R",
+          "remaining": 1
+        },
+        {
+          "step": "position size",
+          "remaining": 1
+        }
+      ]
+    },
+    "SMALLCAP250": {
+      "label": "Smallcap 250",
+      "universe_size": 251,
+      "passed_all_hard_filters": 1,
+      "candidates": [
+        {
+          "symbol": "GESHIP",
+          "passed": true,
+          "steps_passed": 15,
+          "flags": [],
+          "unverified": [],
+          "cmp": 1593.6,
+          "adtv_cr": 109.53,
+          "adtv_source": "NSE turnover",
+          "delivery_pct_20d": 52.47,
+          "volume_ratio": 0.78,
+          "rs_1m_pct": 2.11,
+          "rs_3m_pct": 22.58,
+          "rsi": 62.46,
+          "setup": "Inside bar near resistance",
+          "setup_family": "consolidation",
+          "other_setups": [],
+          "pct_above_ema20": 3.95,
+          "ret_5d_pct": 6.48,
+          "atr_pct": 3.06,
+          "entry": 1633.26,
+          "stop": 1560.11,
+          "stop_basis": "1.5× ATR",
+          "risk_pct": 4.48,
+          "entry_type": "buy above trigger",
+          "target": 1789.01,
+          "target_basis": "just below resistance 1798.00",
+          "target_pct": 9.54,
+          "rr": 2.13,
+          "nearest_resistance": 1798.0,
+          "qty": 27,
+          "position_value": 44098.02,
+          "risk_amount": 1975.02,
+          "score": 4.0,
+          "score_notes": [
+            "1M RS+",
+            "MACD near/above 0",
+            "MACD hist rising",
+            "delivery 52%"
+          ],
+          "adx": 26.71,
+          "macd_above_signal": true
+        }
+      ],
+      "closest_miss": null,
+      "funnel": [
+        {
+          "step": "universe",
+          "remaining": 251
+        },
+        {
+          "step": "enough price history",
+          "remaining": 235
+        },
+        {
+          "step": "price floor",
+          "remaining": 229
+        },
+        {
+          "step": "surveillance / T2T / F&O ban",
+          "remaining": 226
+        },
+        {
+          "step": "no repeated circuits",
+          "remaining": 226
+        },
+        {
+          "step": "liquidity",
+          "remaining": 224
+        },
+        {
+          "step": "primary uptrend (50 EMA, 200)",
+          "remaining": 34
+        },
+        {
+          "step": "20 EMA",
+          "remaining": 29
+        },
+        {
+          "step": "3M relative strength > 0",
+          "remaining": 28
+        },
+        {
+          "step": "RSI 40-75",
+          "remaining": 28
+        },
+        {
+          "step": "named setup",
+          "remaining": 10
+        },
+        {
+          "step": "not overextended",
+          "remaining": 8
+        },
+        {
+          "step": "ATR band",
+          "remaining": 8
+        },
+        {
+          "step": "stop within limit",
+          "remaining": 4
+        },
+        {
+          "step": "target & R:R",
+          "remaining": 1
+        },
+        {
+          "step": "position size",
+          "remaining": 1
+        }
+      ]
+    },
+    "MICROCAP250": {
+      "label": "Microcap 250",
+      "universe_size": 253,
+      "passed_all_hard_filters": 1,
+      "candidates": [
+        {
+          "symbol": "SHREEJISPG",
+          "passed": true,
+          "steps_passed": 15,
+          "flags": [
+            "⚠ASM (long-term, stage unknown — verify)"
+          ],
+          "unverified": [],
+          "cmp": 843.3,
+          "adtv_cr": 96.89,
+          "adtv_source": "NSE turnover",
+          "delivery_pct_20d": 44.1,
+          "volume_ratio": 1.16,
+          "rs_1m_pct": 8.87,
+          "rs_3m_pct": 38.25,
+          "rsi": 66.41,
+          "setup": "Inside bar near resistance",
+          "setup_family": "consolidation",
+          "other_setups": [
+            "NR7 near resistance"
+          ],
+          "pct_above_ema20": 4.88,
+          "ret_5d_pct": 8.59,
+          "atr_pct": 2.95,
+          "entry": 847.39,
+          "stop": 810.11,
+          "stop_basis": "1.5× ATR",
+          "risk_pct": 4.4,
+          "entry_type": "buy above trigger",
+          "target": 932.13,
+          "target_basis": "no overhead resistance (2.5R)",
+          "target_pct": 10.0,
+          "rr": 2.27,
+          "nearest_resistance": null,
+          "qty": 53,
+          "position_value": 44911.74,
+          "risk_amount": 1976.03,
+          "score": 4.0,
+          "score_notes": [
+            "1M RS+",
+            "MACD near/above 0",
+            "MACD hist rising",
+            "near 52W high"
+          ],
+          "adx": 26.33,
+          "macd_above_signal": false
+        }
+      ],
+      "closest_miss": null,
+      "funnel": [
+        {
+          "step": "universe",
+          "remaining": 253
+        },
+        {
+          "step": "enough price history",
+          "remaining": 232
+        },
+        {
+          "step": "price floor",
+          "remaining": 227
+        },
+        {
+          "step": "surveillance / T2T / F&O ban",
+          "remaining": 223
+        },
+        {
+          "step": "no repeated circuits",
+          "remaining": 222
+        },
+        {
+          "step": "liquidity",
+          "remaining": 206
+        },
+        {
+          "step": "primary uptrend (50 EMA, 200)",
+          "remaining": 20
+        },
+        {
+          "step": "20 EMA",
+          "remaining": 17
+        },
+        {
+          "step": "3M relative strength > 0",
+          "remaining": 17
+        },
+        {
+          "step": "RSI 40-75",
+          "remaining": 17
+        },
+        {
+          "step": "named setup",
+          "remaining": 9
+        },
+        {
+          "step": "not overextended",
+          "remaining": 9
+        },
+        {
+          "step": "ATR band",
+          "remaining": 7
+        },
+        {
+          "step": "stop within limit",
+          "remaining": 2
+        },
+        {
+          "step": "target & R:R",
+          "remaining": 1
+        },
+        {
+          "step": "position size",
+          "remaining": 1
+        }
+      ]
+    }
+  }
+}

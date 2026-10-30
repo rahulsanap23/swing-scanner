@@ -1,6 +1,6 @@
-# Swing scan — 2026-10-29
+# Swing scan — 2026-10-30
 Status: **ok** — scan complete  
-Generated 2026-10-29 20:07 IST
+Generated 2026-10-30 20:08 IST
 
 ## Data checks
 ```
@@ -13,8 +13,8 @@ Generated 2026-10-29 20:07 IST
   },
   "prices": {
     "source": "Yahoo Finance (yfinance)",
-    "requested": 705,
-    "received": 700,
+    "requested": 704,
+    "received": 699,
     "missing": [
       "BAGMANE",
       "DUMMYHEG",
@@ -38,30 +38,29 @@ Generated 2026-10-29 20:07 IST
 ```
 
 ## Market
-Nifty 22936.75 | 20/50/200 EMA 22823.99 / 23164.01 / 23925.57 | 5d 1.1% | 21d 0.69% | VIX 15.12 (-4.08% 5d) | breadth >50EMA 21.84%
+Nifty 23053.1 | 20/50/200 EMA 22845.81 / 23159.66 / 23916.0 | 5d 2.0% | 21d 1.48% | VIX 15.3 (-9.24% 5d) | breadth >50EMA 16.79%
 
-## Nifty 50 — 1 passed of 50
+## Nifty 50 — 2 passed of 50
 | Symbol | Setup | CMP | Entry | Stop | Target | Qty | R:R | Score | Flags |
 |---|---|---|---|---|---|---|---|---|---|
-| KOTAKBANK | 52-week high breakout | 459.0 | 459.0 | 443.71 | 497.22 | 108 | 2.5 | 5.18 |  |
-Funnel: universe 50 → enough price history 50 → price floor 50 → surveillance / T2T / F&O ban 50 → no repeated circuits 50 → liquidity 50 → primary uptrend (50 EMA, 200) 9 → 20 EMA 9 → 3M relative strength > 0 9 → RSI 40-75 9 → named setup 8 → not overextended 8 → ATR band 6 → stop within limit 6 → target & R:R 1 → position size 1
+| ADANIPORTS | Inside bar near resistance | 1850.0 | 1875.34 | 1798.67 | 2062.88 | 26 | 2.45 | 4.5 |  |
+| KOTAKBANK | Pullback to 20 EMA | 461.6 | 461.6 | 446.78 | 498.66 | 108 | 2.5 | 4.0 |  |
+Funnel: universe 50 → enough price history 50 → price floor 50 → surveillance / T2T / F&O ban 50 → no repeated circuits 50 → liquidity 50 → primary uptrend (50 EMA, 200) 10 → 20 EMA 10 → 3M relative strength > 0 9 → RSI 40-75 8 → named setup 5 → not overextended 5 → ATR band 4 → stop within limit 4 → target & R:R 2 → position size 2
 
-## Midcap 150 — 3 passed of 150
+## Midcap 150 — 1 passed of 150
 | Symbol | Setup | CMP | Entry | Stop | Target | Qty | R:R | Score | Flags |
 |---|---|---|---|---|---|---|---|---|---|
-| LAURUSLABS | 52-week high breakout | 2244.0 | 2244.0 | 2151.16 | 2468.4 | 21 | 2.42 | 5.79 |  |
-| INDHOTEL | NR7 near resistance | 810.0 | 817.98 | 787.03 | 895.37 | 61 | 2.5 | 4.5 |  |
-| NYKAA | Pullback to 20 EMA | 352.9 | 352.9 | 336.77 | 388.19 | 124 | 2.19 | 3.5 |  |
-Funnel: universe 150 → enough price history 142 → price floor 140 → surveillance / T2T / F&O ban 139 → no repeated circuits 139 → liquidity 122 → primary uptrend (50 EMA, 200) 22 → 20 EMA 21 → 3M relative strength > 0 19 → RSI 40-75 19 → named setup 12 → not overextended 11 → ATR band 11 → stop within limit 9 → target & R:R 3 → position size 3
+| NYKAA | NR7 near resistance | 349.35 | 355.21 | 339.51 | 390.73 | 127 | 2.26 | 4.5 |  |
+Funnel: universe 150 → enough price history 143 → price floor 141 → surveillance / T2T / F&O ban 140 → no repeated circuits 140 → liquidity 122 → primary uptrend (50 EMA, 200) 19 → 20 EMA 17 → 3M relative strength > 0 17 → RSI 40-75 16 → named setup 7 → not overextended 6 → ATR band 6 → stop within limit 5 → target & R:R 1 → position size 1
 
-## Smallcap 250 — 3 passed of 251
+## Smallcap 250 — 1 passed of 251
 | Symbol | Setup | CMP | Entry | Stop | Target | Qty | R:R | Score | Flags |
 |---|---|---|---|---|---|---|---|---|---|
-| GESHIP | Base breakout on volume | 1618.8 | 1618.8 | 1546.09 | 1780.68 | 27 | 2.23 | 5.72 |  |
-| SONACOMS | NR7 near resistance | 873.6 | 887.57 | 843.83 | 976.33 | 45 | 2.03 | 4.0 |  |
-| ANANDRATHI | Inside bar near resistance | 2270.0 | 2287.17 | 2209.58 | 2481.13 | 21 | 2.5 | 4.0 |  |
-Funnel: universe 251 → enough price history 235 → price floor 229 → surveillance / T2T / F&O ban 226 → no repeated circuits 226 → liquidity 225 → primary uptrend (50 EMA, 200) 43 → 20 EMA 39 → 3M relative strength > 0 39 → RSI 40-75 38 → named setup 16 → not overextended 15 → ATR band 14 → stop within limit 4 → target & R:R 3 → position size 3
+| GESHIP | Inside bar near resistance | 1593.6 | 1633.26 | 1560.11 | 1789.01 | 27 | 2.13 | 4.0 |  |
+Funnel: universe 251 → enough price history 235 → price floor 229 → surveillance / T2T / F&O ban 226 → no repeated circuits 226 → liquidity 224 → primary uptrend (50 EMA, 200) 34 → 20 EMA 29 → 3M relative strength > 0 28 → RSI 40-75 28 → named setup 10 → not overextended 8 → ATR band 8 → stop within limit 4 → target & R:R 1 → position size 1
 
-## Microcap 250 — 0 passed of 254
-NO TRADE — closest: LUMAXTECH (failed: stop within limit — stop 7.1% below entry > 5%)
-Funnel: universe 254 → enough price history 231 → price floor 226 → surveillance / T2T / F&O ban 222 → no repeated circuits 221 → liquidity 205 → primary uptrend (50 EMA, 200) 31 → 20 EMA 23 → 3M relative strength > 0 21 → RSI 40-75 21 → named setup 8 → not overextended 7 → ATR band 5 → stop within limit 0 → target & R:R 0 → position size 0
+## Microcap 250 — 1 passed of 253
+| Symbol | Setup | CMP | Entry | Stop | Target | Qty | R:R | Score | Flags |
+|---|---|---|---|---|---|---|---|---|---|
+| SHREEJISPG | Inside bar near resistance | 843.3 | 847.39 | 810.11 | 932.13 | 53 | 2.27 | 4.0 | ⚠ASM (long-term, stage unknown — verify) |
+Funnel: universe 253 → enough price history 232 → price floor 227 → surveillance / T2T / F&O ban 223 → no repeated circuits 222 → liquidity 206 → primary uptrend (50 EMA, 200) 20 → 20 EMA 17 → 3M relative strength > 0 17 → RSI 40-75 17 → named setup 9 → not overextended 9 → ATR band 7 → stop within limit 2 → target & R:R 1 → position size 1
